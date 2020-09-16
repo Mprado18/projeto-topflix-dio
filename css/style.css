@@ -1,0 +1,167 @@
+:root{
+    --vermelho:#e50914;
+    --preta:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Arial black';
+    color: white;
+}
+
+@font-face{
+    font-family: "Ringbearer";
+    src: url('../fonts/RINGM___.TTF');
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial black';
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 13px;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)100%), url('../img/capa.jpg');
+    height: 400px;
+    background-size: 100% 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo{
+    margin-top: 0%;
+    font-size: 40px;
+    font-family: Ringbearer;
+    color: rgb(223, 176, 24);
+}
+
+.filme-principal .subtitulo{
+    font-family: Ringbearer;
+    color: rgb(223, 176, 24);
+    margin-left: 18%;
+    font-size: 25px;
+}
+
+.botao{
+    background-color: #e50914ad;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.botao a{
+    text-decoration: none;
+    color: white;
+}
+
+.botao:hover{
+    background-color: #e50914;
+}
+
+.botao:focus{
+    display: none;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Arial black';
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contato{
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 35px;
+}
+
+/*RESPONSIVO*/
+@media screen and (max-width: 700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav a{
+        font-size: 15px;
+    }
+
+    .filme-principal .titulo{
+        font-size: 30px;
+    }
+    
+    .filme-principal .subtitulo{
+        font-size: 20px;
+    }
+
+    .botao{
+        margin-top: 10px;
+        width: 200px;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px){    
+    .descricao{
+        width: 100%;
+    }
+}
